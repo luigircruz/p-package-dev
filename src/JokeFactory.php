@@ -7,8 +7,21 @@ namespace Luigircruz\PPackageDev;
  */
 class JokeFactory
 {
-    public function hello() 
+    protected $jokes = [
+        'Chuck Norris counted to infinity. Twice.',
+        'Chuck Norris can hear sign language.',
+        'Chuck Norris threw a grenade and killed 50 people, then it exploded.',
+    ];
+
+    public function __construct(array $joke = null)
     {
-        echo "chuck norris jokes goes here";
+        if ($joke) {
+            $this->jokes = $joke;
+        }
+    }
+
+    public function getRandomJoke()
+    {
+        return $this->jokes[array_rand($this->jokes)];
     }
 }
