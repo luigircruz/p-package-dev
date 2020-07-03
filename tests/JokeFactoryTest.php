@@ -1,8 +1,9 @@
 <?php
 
 namespace Luigircruz\PPackageDev\Tests;
-use PHPUnit\Framework\TestCase;
+
 use Luigircruz\PPackageDev\JokeFactory;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @author Luigi Cruz <alainluigicruz@gmail.com>
@@ -10,7 +11,7 @@ use Luigircruz\PPackageDev\JokeFactory;
 class JokeFactoryTest extends TestCase
 {
     /** @test */
-    public function it_returns_a_random_joke() 
+    public function it_returns_a_random_joke()
     {
         $jokes = new JokeFactory([
             'This is a joke',
@@ -22,7 +23,7 @@ class JokeFactoryTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_a_predefined_joke() 
+    public function it_returns_a_predefined_joke()
     {
         $chuckNorrisJokes = [
             'Chuck Norris counted to infinity. Twice.',
